@@ -1,0 +1,10 @@
+import { readdir, readFile, writeFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+const assets = (await readdir('dist/assets')).map(file => `/assets/${file}`);
+const index = await readFile('dist/index.html', 'utf8');
+const version = createHash('sha256').update(index).digest('hex').slice(0, 12);
+const files = ['/', '/index.html', '/icon.svg', '/icon-192.png', '/icon-512.png', '/manifest.webmanifest', ...assets];
+let worker = await readFile('public/sw.js', 'utf8');
+worker = worker.replace("'axxcalender-v1'", `'axxcalender-${version}'`).replace("['/', '/icon.svg', '/manifest.webmanifest']", JSON.stringify(files));
+await writeFile('dist/sw.js', worker);
+console.log(`Offline cache ready: ${files.length} resources (${version})`);
