@@ -19,8 +19,11 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: npm
-      # Enables GitHub Pages with the Actions deployment source if it has
-      # not been switched on yet, and exposes the site metadata.
+      # Reads the Pages configuration and fails fast with a clear error if
+      # Pages is not enabled yet (one-time manual setup: Settings -> Pages
+      # -> Source: GitHub Actions). The `enablement` option is deliberately
+      # not used: it requires a PAT/GitHub App token, GITHUB_TOKEN cannot
+      # create a Pages site.
       - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
       - run: npm ci
       - run: npm run lint
