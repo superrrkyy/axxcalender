@@ -24,7 +24,7 @@
   <!-- pill -->
   <g transform="translate(72 335)">
     <rect width="210" height="32" rx="16" fill="#ffffff" stroke="#e7eae2"/>
-    <circle cx="16" cy="16" r="3" fill="#48694f"><animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/></circle>
+    <circle id="live-dot" cx="16" cy="16" r="3" fill="#48694f"/>
     <text x="28" y="20" font-size="11" fill="#283e35">Live — Selasa, 13 Oktober 2026</text>
   </g>
 </g>
@@ -59,8 +59,7 @@
   </g>
   <!-- decorative spark -->
   <g transform="translate(390 40)" opacity="0.25" stroke="#466b52" stroke-width="1.2">
-    <path d="M20 0v40M0 20h40M6 6l28 28M6 34l28-28"/>
-    <animateTransform attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="18s" repeatCount="indefinite"/>
+    <g id="spark"><path d="M20 0v40M0 20h40M6 6l28 28M6 34l28-28"/></g>
   </g>
 </g>
 <style>
@@ -69,11 +68,15 @@
   #snake-tail { animation: tail-wiggle 1.6s ease-in-out infinite; transform-origin: 140px 140px; }
   #apple { animation: apple-eat 1.6s ease-in-out infinite; transform-origin: 287px 140px; }
   #tongue { animation: tongue 1.6s ease-in-out infinite; }
+  #live-dot { animation: live-pulse 1.6s ease-in-out infinite; }
+  #spark { transform-origin: 20px 20px; animation: spark-rotate 18s linear infinite; }
   @keyframes snake-look { 0%,100%{transform:rotate(-7deg)} 30%{transform:rotate(8deg)} 65%{transform:translateX(10px) rotate(0deg)} }
   @keyframes snake-eye { 0%,100%{transform:translateX(-2px)} 30%,65%{transform:translateX(1px)} }
   @keyframes tail-wiggle { 50%{transform:scaleX(0.94)} }
   @keyframes apple-eat { 0%,35%,100%{transform:scale(1);opacity:1} 65%,85%{transform:translateX(-16px) scale(0.12);opacity:0} }
   @keyframes tongue { 0%,45%,100%{opacity:0} 60%{opacity:1} }
-  @media (prefers-reduced-motion: reduce) { #snake-head,#snake-eye,#snake-tail,#apple,#tongue{animation:none!important} }
+  @keyframes live-pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+  @keyframes spark-rotate { to{transform:rotate(360deg)} }
+  @media (prefers-reduced-motion: reduce) { #snake-head,#snake-eye,#snake-tail,#apple,#tongue,#live-dot,#spark{animation:none!important} }
 </style>
 </svg>

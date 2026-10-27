@@ -1,0 +1,6 @@
+dist/
+dist-pages/
+package-lock.json
+playwright-report/
+test-results/
+.github/assets/

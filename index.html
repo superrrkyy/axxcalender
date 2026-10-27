@@ -4,51 +4,404 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f8f9f5" />
-    <meta name="description" content="Ruang kecil untuk hari-hari besar. Kalender Indonesia, hari libur nasional, jam real-time, dan tema pilihan dalam axxcalender." />
+    <meta
+      name="description"
+      content="Ruang kecil untuk hari-hari besar. Kalender Indonesia, hari libur nasional, jam real-time, dan tema pilihan dalam axxcalender."
+    />
+    <link rel="canonical" href="https://superrrkyy.github.io/axxcalender/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:site_name" content="axxcalender" />
+    <meta property="og:title" content="axxcalender — Ruang untuk setiap hari." />
+    <meta
+      property="og:description"
+      content="Ruang kecil untuk hari-hari besar. Kalender Indonesia, hari libur nasional, jam real-time, dan tema pilihan dalam axxcalender."
+    />
+    <meta property="og:url" content="https://superrrkyy.github.io/axxcalender/" />
+    <meta property="og:image" content="https://superrrkyy.github.io/axxcalender/icon-512.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="axxcalender — Ruang untuk setiap hari." />
+    <meta
+      name="twitter:description"
+      content="Ruang kecil untuk hari-hari besar. Kalender Indonesia, hari libur nasional, jam real-time, dan tema pilihan dalam axxcalender."
+    />
+    <meta name="twitter:image" content="https://superrrkyy.github.io/axxcalender/icon-512.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="axxcalender" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <title>axxcalender — Ruang untuk setiap hari.</title>
   </head>
   <body>
+    <a class="skip-link" href="#calendar">Lewati ke kalender</a>
     <div id="loader" role="status" aria-label="Menyiapkan kalender">
-      <div class="loader-art"><svg viewBox="0 0 240 120" aria-hidden="true"><ellipse cx="116" cy="100" rx="83" ry="7" fill="currentColor" opacity=".08"/><path class="snake-tail" d="M32 85 C15 50 59 56 58 83 S108 99 110 70 S152 55 158 74" fill="none" stroke="#466b52" stroke-width="18" stroke-linecap="round"/><g class="snake-head"><ellipse cx="162" cy="64" rx="23" ry="21" fill="#466b52"/><ellipse cx="168" cy="56" rx="6" ry="8" fill="#fff"/><circle class="snake-eye" cx="170" cy="57" r="3" fill="#172b22"/><path d="M173 72 Q182 74 185 66" stroke="#183e2a" fill="none" stroke-width="2" stroke-linecap="round"/><path class="snake-tongue" d="M185 69h12m-3-3 3 3-3 3" stroke="#d56e65" fill="none" stroke-width="2"/></g><g class="loader-apple"><path d="M207 71C187 55 185 84 199 93Q206 97 214 92C229 80 224 56 207 71Z" fill="#d97760"/><path d="M207 72q-3-13 4-18" stroke="#73543c" stroke-width="3" fill="none"/><path d="M209 63q3-12 14-8-2 10-14 8" fill="#739866"/></g></svg></div>
-      <strong>axxcalender<span>.</span></strong><p>Menyiapkan hari baikmu…</p><div class="loader-track"><span></span></div>
+      <div class="loader-art">
+        <svg viewBox="0 0 240 120" aria-hidden="true">
+          <ellipse cx="116" cy="100" rx="83" ry="7" fill="currentColor" opacity=".08" />
+          <path
+            class="snake-tail"
+            d="M32 85 C15 50 59 56 58 83 S108 99 110 70 S152 55 158 74"
+            fill="none"
+            stroke="#466b52"
+            stroke-width="18"
+            stroke-linecap="round"
+          />
+          <g class="snake-head">
+            <ellipse cx="162" cy="64" rx="23" ry="21" fill="#466b52" />
+            <ellipse cx="168" cy="56" rx="6" ry="8" fill="#fff" />
+            <circle class="snake-eye" cx="170" cy="57" r="3" fill="#172b22" />
+            <path
+              d="M173 72 Q182 74 185 66"
+              stroke="#183e2a"
+              fill="none"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <path
+              class="snake-tongue"
+              d="M185 69h12m-3-3 3 3-3 3"
+              stroke="#d56e65"
+              fill="none"
+              stroke-width="2"
+            />
+          </g>
+          <g class="loader-apple">
+            <path
+              d="M207 71C187 55 185 84 199 93Q206 97 214 92C229 80 224 56 207 71Z"
+              fill="#d97760"
+            />
+            <path d="M207 72q-3-13 4-18" stroke="#73543c" stroke-width="3" fill="none" />
+            <path d="M209 63q3-12 14-8-2 10-14 8" fill="#739866" />
+          </g>
+        </svg>
+      </div>
+      <strong>axxcalender<span>.</span></strong>
+      <p>Menyiapkan hari baikmu…</p>
+      <div class="loader-track"><span></span></div>
     </div>
     <div class="app-shell">
       <header class="site-header">
-        <a class="brand" href="#" aria-label="axxcalender beranda"><span class="brand-icon"><i></i><i></i><i></i><i></i></span>axxcalender<span class="brand-dot">.</span></a>
-        <nav class="main-nav" aria-label="Navigasi utama"><a href="#calendar" class="active"><i data-lucide="calendar-days"></i>Kalender</a><a href="#themes"><i data-lucide="palette"></i>Koleksi tema<span class="nav-count">4</span></a></nav>
-        <div class="header-actions"><span class="live-status"><span></span>Hari ini, lebih teratur</span><button class="icon-button" id="settings-open" aria-label="Buka pengaturan"><i data-lucide="sliders-horizontal"></i></button></div>
+        <a class="brand" href="#" aria-label="axxcalender beranda"
+          ><span class="brand-icon"><i></i><i></i><i></i><i></i></span>axxcalender<span
+            class="brand-dot"
+            >.</span
+          ></a
+        >
+        <nav class="main-nav" aria-label="Navigasi utama">
+          <a href="#calendar" class="active"><i data-lucide="calendar-days"></i>Kalender</a
+          ><a href="#themes"
+            ><i data-lucide="palette"></i>Koleksi tema<span class="nav-count">4</span></a
+          >
+        </nav>
+        <div class="header-actions">
+          <span class="live-status"><span></span>Hari ini, lebih teratur</span
+          ><button
+            class="icon-button"
+            id="settings-open"
+            aria-label="Buka pengaturan"
+            aria-haspopup="dialog"
+            aria-controls="settings-panel"
+            aria-expanded="false"
+          >
+            <i data-lucide="sliders-horizontal"></i>
+          </button>
+        </div>
       </header>
       <main>
         <section class="hero">
-          <div><div class="eyebrow"><span class="tiny-spark">✳</span> RUANG KECIL UNTUK HARI-HARI BESAR</div><h1>Hari-hari baik,<br><span>dimulai di sini.</span></h1><p>Atur waktumu. Temukan ritmemu. Nikmati setiap hari.</p></div>
-          <div class="hero-note"><div class="today-pill"><span></span><span id="hero-date"></span></div><p>Satu hari, sejuta kemungkinan.<br><span>Jadikan hari ini berarti.</span></p><svg class="hero-spark" viewBox="0 0 80 80" aria-hidden="true"><path d="M40 4v72M4 40h72M14 14l52 52M14 66l52-52" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div>
+          <div>
+            <div class="eyebrow">
+              <span class="tiny-spark">✳</span> RUANG KECIL UNTUK HARI-HARI BESAR
+            </div>
+            <h1>Hari-hari baik,<br /><span>dimulai di sini.</span></h1>
+            <p>Atur waktumu. Temukan ritmemu. Nikmati setiap hari.</p>
+          </div>
+          <div class="hero-note">
+            <div class="today-pill"><span></span><span id="hero-date"></span></div>
+            <p>Satu hari, sejuta kemungkinan.<br /><span>Jadikan hari ini berarti.</span></p>
+            <svg class="hero-spark" viewBox="0 0 80 80" aria-hidden="true">
+              <path
+                d="M40 4v72M4 40h72M14 14l52 52M14 66l52-52"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+            </svg>
+          </div>
         </section>
         <section id="calendar" class="dashboard" aria-label="Kalender dan waktu">
           <div class="calendar-card panel">
-            <div class="calendar-toolbar"><div class="month-heading"><div class="month-icon"><i data-lucide="calendar-days"></i></div><div><button id="month-picker-open" class="month-title" aria-label="Pilih bulan dan tahun"><span id="month-label"></span><i data-lucide="chevron-down"></i></button><p id="month-caption">Ruang untuk rencana yang berarti.</p></div></div><div class="calendar-controls"><button id="today-button">Hari ini</button><div class="month-arrows"><button id="previous-month" aria-label="Bulan sebelumnya"><i data-lucide="chevron-left"></i></button><button id="next-month" aria-label="Bulan berikutnya"><i data-lucide="chevron-right"></i></button></div></div></div>
-            <div class="calendar-weekdays" aria-hidden="true"><span>Sen</span><span>Sel</span><span>Rab</span><span>Kam</span><span>Jum</span><span>Sab</span><span>Min</span></div>
-            <div id="calendar-grid" class="calendar-grid" role="group" aria-label="Tanggal dalam bulan"></div>
-            <div class="calendar-bottom"><div class="calendar-legend"><span><i class="legend-today"></i>Hari ini</span><span><i class="legend-holiday"></i>Libur nasional</span><span><i class="legend-agenda"></i>Agenda kamu</span></div><button id="holiday-open" class="text-button">Lihat hari libur<i data-lucide="arrow-up-right"></i></button></div>
+            <div class="calendar-toolbar">
+              <div class="month-heading">
+                <div class="month-icon"><i data-lucide="calendar-days"></i></div>
+                <div>
+                  <button
+                    id="month-picker-open"
+                    class="month-title"
+                    aria-label="Pilih bulan dan tahun"
+                    aria-haspopup="dialog"
+                  >
+                    <span id="month-label"></span><i data-lucide="chevron-down"></i>
+                  </button>
+                  <p id="month-caption">Ruang untuk rencana yang berarti.</p>
+                </div>
+              </div>
+              <div class="calendar-controls">
+                <button id="today-button">Hari ini</button>
+                <div class="month-arrows">
+                  <button id="previous-month" aria-label="Bulan sebelumnya">
+                    <i data-lucide="chevron-left"></i></button
+                  ><button id="next-month" aria-label="Bulan berikutnya">
+                    <i data-lucide="chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="calendar-weekdays" aria-hidden="true">
+              <span>Sen</span><span>Sel</span><span>Rab</span><span>Kam</span><span>Jum</span
+              ><span>Sab</span><span>Min</span>
+            </div>
+            <div
+              id="calendar-grid"
+              class="calendar-grid"
+              role="group"
+              aria-label="Tanggal dalam bulan"
+            ></div>
+            <div class="calendar-bottom">
+              <div class="calendar-legend">
+                <span><i class="legend-today"></i>Hari ini</span
+                ><span><i class="legend-holiday"></i>Libur nasional</span
+                ><span><i class="legend-agenda"></i>Agenda kamu</span>
+              </div>
+              <button id="holiday-open" class="text-button">
+                Lihat hari libur<i data-lucide="arrow-up-right"></i>
+              </button>
+            </div>
           </div>
           <aside class="side-column">
-            <section class="clock-card" aria-label="Jam real-time"><div class="clock-top"><span><i class="status-dot"></i> SAAT INI</span><button id="clock-format-button" title="Ubah format 12/24 jam">24 JAM</button></div><div id="clock" class="clock-time" aria-live="off"><span id="clock-hours">00</span><span class="clock-colon">:</span><span id="clock-minutes">00</span><span id="clock-seconds">00</span></div><p id="clock-date"></p><div class="clock-bottom"><span><i data-lucide="globe-2"></i><span id="clock-zone">Waktu lokal</span></span><span class="clock-sync"><span></span>Live</span></div><div class="clock-orbit orbit-one"></div><div class="clock-orbit orbit-two"></div></section>
-            <section class="agenda-card panel"><div class="section-heading"><h2><i data-lucide="sun"></i>Hari pilihanmu</h2><span id="selected-date-short"></span></div><div id="selected-content"></div><button class="add-agenda-button" id="add-agenda"><i data-lucide="plus"></i>Tambah agenda<span>↗</span></button></section>
-            <section class="year-card panel"><div><span id="year-progress-title">Perjalanan tahun ini</span><strong id="year-percent"></strong></div><div class="progress-track"><span id="year-progress"></span></div><p id="year-remaining"></p></section>
+            <section class="clock-card" aria-label="Jam real-time">
+              <div class="clock-top">
+                <span><i class="status-dot"></i> SAAT INI</span
+                ><button id="clock-format-button" title="Ubah format 12/24 jam">24 JAM</button>
+              </div>
+              <div id="clock" class="clock-time" aria-live="off">
+                <span id="clock-hours">00</span><span class="clock-colon">:</span
+                ><span id="clock-minutes">00</span><span id="clock-seconds">00</span>
+              </div>
+              <p id="clock-date"></p>
+              <div class="clock-bottom">
+                <span><i data-lucide="earth"></i><span id="clock-zone">Waktu lokal</span></span
+                ><span class="clock-sync"><span></span>Live</span>
+              </div>
+              <div class="clock-orbit orbit-one"></div>
+              <div class="clock-orbit orbit-two"></div>
+            </section>
+            <section class="agenda-card panel">
+              <div class="section-heading">
+                <h2><i data-lucide="sun"></i>Hari pilihanmu</h2>
+                <span id="selected-date-short"></span>
+              </div>
+              <div id="selected-content"></div>
+              <button class="add-agenda-button" id="add-agenda">
+                <i data-lucide="plus"></i>Tambah agenda<span>↗</span>
+              </button>
+            </section>
+            <section class="year-card panel">
+              <div>
+                <span id="year-progress-title">Perjalanan tahun ini</span
+                ><strong id="year-percent"></strong>
+              </div>
+              <div class="progress-track"><span id="year-progress"></span></div>
+              <p id="year-remaining"></p>
+            </section>
           </aside>
         </section>
-        <section id="themes" class="themes-section"><div class="themes-heading"><div><div class="eyebrow">SESUAI SUASANA HATIMU</div><h2>Kalendermu, <em>gayamu.</em></h2><p>Sedikit warna. Perspektif yang berbeda.</p></div><span class="collection-tag"><i data-lucide="sparkles"></i>CURATED COLLECTION / 01</span></div><div class="theme-grid" id="theme-grid"></div></section>
-        <section class="bottom-cta"><div class="cta-icon"><i data-lucide="sprout"></i></div><div><h2>Rencana besar dimulai dari satu hari.</h2><p>Beri ruang untuk hal-hal yang penting buatmu.</p></div><button id="cta-agenda">Buat agenda pertamamu<i data-lucide="arrow-up-right"></i></button></section>
+        <section id="themes" class="themes-section">
+          <div class="themes-heading">
+            <div>
+              <div class="eyebrow">SESUAI SUASANA HATIMU</div>
+              <h2>Kalendermu, <em>gayamu.</em></h2>
+              <p>Sedikit warna. Perspektif yang berbeda.</p>
+            </div>
+            <span class="collection-tag"
+              ><i data-lucide="sparkles"></i>CURATED COLLECTION / 01</span
+            >
+          </div>
+          <div class="theme-grid" id="theme-grid"></div>
+        </section>
+        <section class="bottom-cta">
+          <div class="cta-icon"><i data-lucide="sprout"></i></div>
+          <div>
+            <h2>Rencana besar dimulai dari satu hari.</h2>
+            <p>Beri ruang untuk hal-hal yang penting buatmu.</p>
+          </div>
+          <button id="cta-agenda">Buat agenda pertamamu<i data-lucide="arrow-up-right"></i></button>
+        </section>
       </main>
-      <footer><a class="brand footer-brand" href="#">axxcalender<span class="brand-dot">.</span></a><span>Dibuat untuk waktumu, bukan sebaliknya.</span><div><span>© <span id="copyright-year">2026</span> axxcalender</span><span class="footer-location"><span></span>Made with care, in Indonesia</span></div></footer>
+      <footer>
+        <a class="brand footer-brand" href="#">axxcalender<span class="brand-dot">.</span></a
+        ><span>Dibuat untuk waktumu, bukan sebaliknya.</span>
+        <div>
+          <span>© <span id="copyright-year">2026</span> axxcalender</span
+          ><span class="footer-location"><span></span>Made with care, in Indonesia</span>
+        </div>
+      </footer>
     </div>
     <div class="overlay" id="settings-overlay" hidden></div>
-    <aside id="settings-panel" class="settings-panel" aria-modal="true" role="dialog" aria-labelledby="settings-title" hidden><div class="drawer-header"><div><div class="eyebrow">BUAT JADI MILIKMU</div><h2 id="settings-title">Pengaturan</h2></div><button id="settings-close" class="icon-button" aria-label="Tutup pengaturan"><i data-lucide="x"></i></button></div><div class="settings-body"><section><h3><i data-lucide="sun-moon"></i>Tampilan</h3><p>Pilih suasana yang paling nyaman di matamu.</p><div class="mode-options"><button data-mode="light"><i data-lucide="sun"></i>Terang</button><button data-mode="dark"><i data-lucide="moon"></i>Gelap</button><button data-mode="system"><i data-lucide="monitor"></i>Sistem</button></div></section><section><h3><i data-lucide="clock-3"></i>Format waktu</h3><label class="setting-row" for="format-24">Gunakan format 24 jam<input id="format-24" type="checkbox" role="switch" checked></label><label for="timezone-select" class="setting-label">Zona waktu</label><select id="timezone-select"><option value="local">Otomatis (perangkat)</option><option value="Asia/Jakarta">WIB · Jakarta</option><option value="Asia/Makassar">WITA · Makassar</option><option value="Asia/Jayapura">WIT · Jayapura</option></select></section><section><h3><i data-lucide="bell-ring"></i>Notifikasi perangkat</h3><p>Kirim notifikasi sungguhan ke perangkatmu, bukan hanya pesan di halaman.</p><div id="notification-status" class="permission-status">Izin belum diberikan</div><button id="test-notification" class="primary-button"><i data-lucide="bell"></i>Izinkan & tes notifikasi</button><p class="setting-note">Memerlukan HTTPS dan izin notifikasi. Di iPhone/iPad (iOS 16.4+), tambahkan website ke Layar Utama lewat Safari, lalu buka dari ikon aplikasi. Notifikasi dapat disenyapkan oleh mode Fokus atau pengaturan OS. Tester ini bukan pengingat otomatis.</p></section><section><h3><i data-lucide="download"></i>Aplikasi & data</h3><button id="install-button" class="secondary-button"><i data-lucide="smartphone"></i>Pasang axxcalender</button><p class="setting-note" id="install-note">Agenda dan preferensi disimpan hanya di browser ini. Tidak perlu akun.</p><button id="export-agenda" class="text-button">Ekspor agenda (.ics)<i data-lucide="arrow-up-right"></i></button></section></div><div class="drawer-footer">Waktumu. Ritmemu. axxcalender.</div></aside>
-    <dialog id="agenda-dialog"><form id="agenda-form"><div class="dialog-header"><div><div class="eyebrow">SATU LANGKAH KECIL</div><h2>Agenda baru</h2></div><button type="button" class="icon-button" data-close-dialog aria-label="Tutup"><i data-lucide="x"></i></button></div><label for="agenda-title">Apa rencanamu?</label><input id="agenda-title" placeholder="Misalnya, waktu untuk diri sendiri" maxlength="80" required><div class="form-columns"><div><label for="agenda-date">Tanggal</label><input id="agenda-date" type="date" required></div><div><label for="agenda-time">Waktu (opsional)</label><input id="agenda-time" type="time"></div></div><label for="agenda-note">Catatan (opsional)</label><textarea id="agenda-note" placeholder="Detail kecil yang ingin kamu ingat…" maxlength="300" rows="3"></textarea><button class="primary-button" type="submit">Simpan agenda<i data-lucide="check"></i></button><p class="setting-note">Tersimpan di perangkat ini. Tidak mengirim pengingat otomatis.</p></form></dialog>
-    <dialog id="holiday-dialog"><div class="dialog-header"><div><div class="eyebrow">WAKTU UNTUK JEDA</div><h2>Hari libur nasional</h2></div><button class="icon-button" data-close-dialog aria-label="Tutup"><i data-lucide="x"></i></button></div><div class="holiday-year-control"><button id="holiday-previous" class="icon-button" aria-label="Tahun sebelumnya"><i data-lucide="chevron-left"></i></button><strong id="holiday-year"></strong><button id="holiday-next" class="icon-button" aria-label="Tahun berikutnya"><i data-lucide="chevron-right"></i></button></div><div id="holiday-list"></div><p class="setting-note" id="holiday-source"></p></dialog>
-    <dialog id="month-dialog"><form id="month-form"><div class="dialog-header"><h2>Lompat ke bulan</h2><button type="button" class="icon-button" data-close-dialog aria-label="Tutup"><i data-lucide="x"></i></button></div><label for="month-input">Bulan & tahun</label><input type="month" id="month-input" min="1900-01" max="2100-12" required><button type="submit" class="primary-button">Buka kalender<i data-lucide="arrow-right"></i></button></form></dialog>
-    <div id="toast" class="toast" role="status" hidden><i data-lucide="check-circle-2"></i><span></span></div>
+    <aside
+      id="settings-panel"
+      class="settings-panel"
+      aria-modal="true"
+      role="dialog"
+      aria-labelledby="settings-title"
+      hidden
+    >
+      <div class="drawer-header">
+        <div>
+          <div class="eyebrow">BUAT JADI MILIKMU</div>
+          <h2 id="settings-title">Pengaturan</h2>
+        </div>
+        <button id="settings-close" class="icon-button" aria-label="Tutup pengaturan">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="settings-body">
+        <section>
+          <h3><i data-lucide="sun-moon"></i>Tampilan</h3>
+          <p>Pilih suasana yang paling nyaman di matamu.</p>
+          <div class="mode-options">
+            <button data-mode="light"><i data-lucide="sun"></i>Terang</button
+            ><button data-mode="dark"><i data-lucide="moon"></i>Gelap</button
+            ><button data-mode="system"><i data-lucide="monitor"></i>Sistem</button>
+          </div>
+        </section>
+        <section>
+          <h3><i data-lucide="clock-3"></i>Format waktu</h3>
+          <label class="setting-row" for="format-24"
+            >Gunakan format 24 jam<input
+              id="format-24"
+              type="checkbox"
+              role="switch"
+              checked /></label
+          ><label for="timezone-select" class="setting-label">Zona waktu</label
+          ><select id="timezone-select">
+            <option value="local">Otomatis (perangkat)</option>
+            <option value="Asia/Jakarta">WIB · Jakarta</option>
+            <option value="Asia/Makassar">WITA · Makassar</option>
+            <option value="Asia/Jayapura">WIT · Jayapura</option>
+          </select>
+        </section>
+        <section>
+          <h3><i data-lucide="bell-ring"></i>Notifikasi perangkat</h3>
+          <p>Kirim notifikasi sungguhan ke perangkatmu, bukan hanya pesan di halaman.</p>
+          <div id="notification-status" class="permission-status">Izin belum diberikan</div>
+          <button id="test-notification" class="primary-button">
+            <i data-lucide="bell"></i>Izinkan & tes notifikasi
+          </button>
+          <p class="setting-note">
+            Memerlukan HTTPS dan izin notifikasi. Di iPhone/iPad (iOS 16.4+), tambahkan website ke
+            Layar Utama lewat Safari, lalu buka dari ikon aplikasi. Notifikasi dapat disenyapkan
+            oleh mode Fokus atau pengaturan OS. Tester ini bukan pengingat otomatis.
+          </p>
+        </section>
+        <section>
+          <h3><i data-lucide="download"></i>Aplikasi & data</h3>
+          <button id="install-button" class="secondary-button">
+            <i data-lucide="smartphone"></i>Pasang axxcalender
+          </button>
+          <p class="setting-note" id="install-note">
+            Agenda dan preferensi disimpan hanya di browser ini. Tidak perlu akun.
+          </p>
+          <button id="export-agenda" class="text-button">
+            Ekspor agenda (.ics)<i data-lucide="arrow-up-right"></i>
+          </button>
+        </section>
+      </div>
+      <div class="drawer-footer">Waktumu. Ritmemu. axxcalender.</div>
+    </aside>
+    <dialog id="agenda-dialog">
+      <form id="agenda-form">
+        <div class="dialog-header">
+          <div>
+            <div class="eyebrow">SATU LANGKAH KECIL</div>
+            <h2>Agenda baru</h2>
+          </div>
+          <button type="button" class="icon-button" data-close-dialog aria-label="Tutup">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+        <label for="agenda-title">Apa rencanamu?</label
+        ><input
+          id="agenda-title"
+          placeholder="Misalnya, waktu untuk diri sendiri"
+          maxlength="80"
+          required
+        />
+        <div class="form-columns">
+          <div>
+            <label for="agenda-date">Tanggal</label><input id="agenda-date" type="date" required />
+          </div>
+          <div>
+            <label for="agenda-time">Waktu (opsional)</label><input id="agenda-time" type="time" />
+          </div>
+        </div>
+        <label for="agenda-note">Catatan (opsional)</label
+        ><textarea
+          id="agenda-note"
+          placeholder="Detail kecil yang ingin kamu ingat…"
+          maxlength="300"
+          rows="3"
+        ></textarea
+        ><button class="primary-button" type="submit">
+          Simpan agenda<i data-lucide="check"></i>
+        </button>
+        <p class="setting-note">Tersimpan di perangkat ini. Tidak mengirim pengingat otomatis.</p>
+      </form>
+    </dialog>
+    <dialog id="holiday-dialog">
+      <div class="dialog-header">
+        <div>
+          <div class="eyebrow">WAKTU UNTUK JEDA</div>
+          <h2>Hari libur nasional</h2>
+        </div>
+        <button class="icon-button" data-close-dialog aria-label="Tutup">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="holiday-year-control">
+        <button id="holiday-previous" class="icon-button" aria-label="Tahun sebelumnya">
+          <i data-lucide="chevron-left"></i></button
+        ><strong id="holiday-year"></strong
+        ><button id="holiday-next" class="icon-button" aria-label="Tahun berikutnya">
+          <i data-lucide="chevron-right"></i>
+        </button>
+      </div>
+      <div id="holiday-list"></div>
+      <p class="setting-note" id="holiday-source"></p>
+    </dialog>
+    <dialog id="month-dialog">
+      <form id="month-form">
+        <div class="dialog-header">
+          <h2>Lompat ke bulan</h2>
+          <button type="button" class="icon-button" data-close-dialog aria-label="Tutup">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+        <label for="month-input">Bulan & tahun</label
+        ><input type="month" id="month-input" min="1900-01" max="2100-12" required /><button
+          type="submit"
+          class="primary-button"
+        >
+          Buka kalender<i data-lucide="arrow-right"></i>
+        </button>
+      </form>
+    </dialog>
+    <div id="toast" class="toast" role="status" hidden>
+      <i data-lucide="circle-check-big"></i><span></span>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

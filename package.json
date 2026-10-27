@@ -1,22 +1,34 @@
 {
   "name": "axxcalender",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build && node scripts/precache.mjs",
+    "build:pages": "GITHUB_PAGES=true vite build --outDir dist-pages && node scripts/precache.mjs dist-pages",
     "preview": "vite preview --host 0.0.0.0",
+    "preview:pages": "GITHUB_PAGES=true vite preview --outDir dist-pages --port 4174 --strictPort",
+    "lint": "eslint .",
+    "format": "prettier --write \"**/*.{js,mjs,css,html,json,webmanifest,yml,md}\"",
+    "format:check": "prettier --check \"**/*.{js,mjs,css,html,json,webmanifest,yml,md}\"",
     "test": "node --test tests/*.test.js",
     "test:e2e": "playwright test"
   },
   "dependencies": {
     "@fontsource/dm-sans": "^5.3.0",
     "@fontsource/dm-serif-display": "^5.3.0",
-    "lucide": "^0.468.0"
+    "lucide": "^1.61.0"
   },
   "devDependencies": {
-    "@playwright/test": "^1.64.0",
-    "vite": "^6.1.0"
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.64.1",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.10",
+    "vite": "^8.3.5"
   }
 }
