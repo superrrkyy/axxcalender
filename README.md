@@ -51,7 +51,7 @@ _Website kalender personal berbahasa Indonesia — editorial premium, jam real-t
 
 **Live:** **https://superrrkyy.github.io/axxcalender/**
 
-> **Satu kali aktivasi:** repo → _Settings → Pages → Build and deployment → Source: GitHub Actions_ (workflow juga menyertakan `actions/configure-pages`). Setelah itu tunggu 1–2 menit setelah _Actions → Deploy_ hijau. Untuk domain root/custom, website disajikan di `/` tanpa perubahan `base`. Untuk project pages `/axxcalender/` default, `vite.config.js` sudah siap dengan `base` otomatis dan semua path runtime/PWA sadar-base.
+> **Satu kali aktivasi:** repo → _Settings → Pages → Build and deployment → Source: GitHub Actions_ (langkah `actions/configure-pages` di workflow akan gagal dengan pesan jelas jika langkah ini belum dilakukan — opsi `enablement` sengaja tidak dipakai karena memerlukan PAT/GitHub App, bukan `GITHUB_TOKEN`). Setelah itu tunggu 1–2 menit setelah _Actions → Deploy_ hijau. Untuk domain root/custom, website disajikan di `/` tanpa perubahan `base`. Untuk project pages `/axxcalender/` default, `vite.config.js` sudah siap dengan `base` otomatis dan semua path runtime/PWA sadar-base.
 
 **Alternatif hosting statis:** Vercel / Netlify / Cloudflare Pages — Build: `npm run build` → Output: `dist` (host di root `/`)
 
