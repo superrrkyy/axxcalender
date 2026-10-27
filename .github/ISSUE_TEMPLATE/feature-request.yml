@@ -1,0 +1,12 @@
+name: Usulan fitur
+description: Usulkan ide untuk axxcalender
+title: '[Fitur] '
+labels: [enhancement]
+body:
+  - type: textarea
+    id: usulan
+    attributes:
+      label: Fitur apa yang kamu inginkan?
+      description: Jelaskan masalah yang ingin diselesaikan dan solusi yang kamu bayangkan.
+    validations:
+      required: true

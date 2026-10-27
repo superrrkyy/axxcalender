@@ -1,0 +1,19 @@
+name: Laporan bug
+description: Laporkan masalah pada axxcalender
+title: '[Bug] '
+labels: [bug]
+body:
+  - type: textarea
+    id: deskripsi
+    attributes:
+      label: Apa yang terjadi?
+      description: Jelaskan bug-nya dan langkah untuk mereproduksinya.
+    validations:
+      required: true
+  - type: input
+    id: lingkungan
+    attributes:
+      label: Browser & perangkat
+      placeholder: 'Contoh: Chrome 130 di Android 15'
+    validations:
+      required: true
